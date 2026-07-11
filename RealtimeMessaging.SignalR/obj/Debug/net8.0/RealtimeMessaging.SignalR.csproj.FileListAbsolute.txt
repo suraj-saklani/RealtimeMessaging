@@ -1,0 +1,17 @@
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.SignalR.deps.json
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.SignalR.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.SignalR.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.Abstractions.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.Core.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.Abstractions.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\bin\Debug\net8.0\RealtimeMessaging.Core.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.csproj.AssemblyReference.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.AssemblyInfoInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.AssemblyInfo.cs
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.csproj.CoreCompileInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\Realtime.7E6F94E5.Up2Date
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\refint\RealtimeMessaging.SignalR.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\RealtimeMessaging.SignalR.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SignalR\obj\Debug\net8.0\ref\RealtimeMessaging.SignalR.dll

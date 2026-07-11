@@ -1,0 +1,11 @@
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\bin\Debug\net8.0\RealtimeMessaging.Persistence.deps.json
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\bin\Debug\net8.0\RealtimeMessaging.Persistence.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\bin\Debug\net8.0\RealtimeMessaging.Persistence.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\RealtimeMessaging.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\RealtimeMessaging.Persistence.AssemblyInfoInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\RealtimeMessaging.Persistence.AssemblyInfo.cs
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\RealtimeMessaging.Persistence.csproj.CoreCompileInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\RealtimeMessaging.Persistence.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\refint\RealtimeMessaging.Persistence.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\RealtimeMessaging.Persistence.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Persistence\obj\Debug\net8.0\ref\RealtimeMessaging.Persistence.dll

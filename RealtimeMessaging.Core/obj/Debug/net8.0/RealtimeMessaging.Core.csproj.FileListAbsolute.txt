@@ -1,0 +1,15 @@
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\bin\Debug\net8.0\RealtimeMessaging.Core.deps.json
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\bin\Debug\net8.0\RealtimeMessaging.Core.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\bin\Debug\net8.0\RealtimeMessaging.Core.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\bin\Debug\net8.0\RealtimeMessaging.Abstractions.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\bin\Debug\net8.0\RealtimeMessaging.Abstractions.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.csproj.AssemblyReference.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.AssemblyInfoInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.AssemblyInfo.cs
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.csproj.CoreCompileInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\Realtime.E8B4CEAE.Up2Date
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\refint\RealtimeMessaging.Core.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\RealtimeMessaging.Core.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Core\obj\Debug\net8.0\ref\RealtimeMessaging.Core.dll

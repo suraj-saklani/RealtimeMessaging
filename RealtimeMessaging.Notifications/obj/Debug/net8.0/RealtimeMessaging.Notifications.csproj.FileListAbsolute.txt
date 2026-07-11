@@ -1,0 +1,11 @@
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\bin\Debug\net8.0\RealtimeMessaging.Notifications.deps.json
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\bin\Debug\net8.0\RealtimeMessaging.Notifications.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\bin\Debug\net8.0\RealtimeMessaging.Notifications.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\RealtimeMessaging.Notifications.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\RealtimeMessaging.Notifications.AssemblyInfoInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\RealtimeMessaging.Notifications.AssemblyInfo.cs
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\RealtimeMessaging.Notifications.csproj.CoreCompileInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\RealtimeMessaging.Notifications.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\refint\RealtimeMessaging.Notifications.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\RealtimeMessaging.Notifications.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Notifications\obj\Debug\net8.0\ref\RealtimeMessaging.Notifications.dll

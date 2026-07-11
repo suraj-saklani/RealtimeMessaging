@@ -1,0 +1,11 @@
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\bin\Debug\net8.0\RealtimeMessaging.SqlServer.deps.json
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\bin\Debug\net8.0\RealtimeMessaging.SqlServer.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\bin\Debug\net8.0\RealtimeMessaging.SqlServer.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\RealtimeMessaging.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\RealtimeMessaging.SqlServer.AssemblyInfoInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\RealtimeMessaging.SqlServer.AssemblyInfo.cs
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\RealtimeMessaging.SqlServer.csproj.CoreCompileInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\RealtimeMessaging.SqlServer.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\refint\RealtimeMessaging.SqlServer.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\RealtimeMessaging.SqlServer.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.SqlServer\obj\Debug\net8.0\ref\RealtimeMessaging.SqlServer.dll

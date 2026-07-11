@@ -1,0 +1,11 @@
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\bin\Debug\net8.0\RealtimeMessaging.Abstractions.deps.json
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\bin\Debug\net8.0\RealtimeMessaging.Abstractions.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\bin\Debug\net8.0\RealtimeMessaging.Abstractions.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\RealtimeMessaging.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\RealtimeMessaging.Abstractions.AssemblyInfoInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\RealtimeMessaging.Abstractions.AssemblyInfo.cs
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\RealtimeMessaging.Abstractions.csproj.CoreCompileInputs.cache
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\RealtimeMessaging.Abstractions.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\refint\RealtimeMessaging.Abstractions.dll
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\RealtimeMessaging.Abstractions.pdb
+E:\Projects\RealtimeMessaging\RealtimeMessaging.Abstractions\obj\Debug\net8.0\ref\RealtimeMessaging.Abstractions.dll
