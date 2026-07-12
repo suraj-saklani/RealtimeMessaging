@@ -1,10 +1,13 @@
 # Visual Studio
 .vs/
 
-# Build output
-**/bin/
-**/obj/
+# Build artifacts
+[Bb]in/
+[Oo]bj/
 
+# or alternatively
+**/[Bb]in/
+**/[Oo]bj/
 # Visual Studio user files
 *.user
 *.suo
