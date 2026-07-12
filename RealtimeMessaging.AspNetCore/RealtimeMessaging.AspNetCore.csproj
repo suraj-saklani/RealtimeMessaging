@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RealtimeMessaging.Core\RealtimeMessaging.Core.csproj" />
+    <ProjectReference Include="..\RealtimeMessaging.Persistence\RealtimeMessaging.Persistence.csproj" />
     <ProjectReference Include="..\RealtimeMessaging.SignalR\RealtimeMessaging.SignalR.csproj" />
   </ItemGroup>
 

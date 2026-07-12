@@ -2,9 +2,7 @@
   <Project Path="../RealtimeMessaging.Abstractions/RealtimeMessaging.Abstractions.csproj" />
   <Project Path="../RealtimeMessaging.AspNetCore/RealtimeMessaging.AspNetCore.csproj" />
   <Project Path="../RealtimeMessaging.Core/RealtimeMessaging.Core.csproj" />
-  <Project Path="../RealtimeMessaging.Notifications/RealtimeMessaging.Notifications.csproj" />
   <Project Path="../RealtimeMessaging.Persistence/RealtimeMessaging.Persistence.csproj" />
   <Project Path="../RealtimeMessaging.SignalR/RealtimeMessaging.SignalR.csproj" />
-  <Project Path="../RealtimeMessaging.SqlServer/RealtimeMessaging.SqlServer.csproj" />
   <Project Path="RealtimeMessaging.web.csproj" />
 </Solution>
