@@ -9,18 +9,21 @@ namespace RealtimeMessaging.Core.Service.NotificationService
 {
     public class NotificationService(INotificationDispatcher _dispatcher, IRepository<NotificationEntity> _notificationRepository = null) : INotificationService
     {
-        public async Task NotifyUserAsync(string userId, NotificationRequest request)
+        public async Task NotifyUserAsync(string userId, NotificationRequest request, bool saveInDB = false)
         {
 
             if (string.IsNullOrWhiteSpace(userId))
                 throw new ArgumentException(nameof(userId));
 
-            await AddNotification(new NotificationEntity
+            if (saveInDB)
             {
-                UserId = userId,
-                Title = request.Title,
-                Message = request.Message
-            });
+                await AddNotification(new NotificationEntity
+                {
+                    UserId = userId,
+                    Title = request.Title,
+                    Message = request.Message
+                });
+            }
 
             await _dispatcher.SendToUserAsync(userId, request);
         }

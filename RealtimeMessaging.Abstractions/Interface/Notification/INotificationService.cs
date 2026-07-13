@@ -9,6 +9,6 @@ namespace RealtimeMessaging.Abstractions.Interface.Notification
 {
     public interface INotificationService
     {
-        Task NotifyUserAsync(string userId, NotificationRequest request);
+        Task NotifyUserAsync(string userId, NotificationRequest request, bool saveInDB = false);
     }
 }
