@@ -2,6 +2,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using RealtimeMessaging.AspNetCore;
 using RealtimeMessaging.Core.Repositories;
 using RealtimeMessaging.Persistence.Configuration;
 using RealtimeMessaging.Persistence.DbContexts;
@@ -25,7 +27,28 @@ namespace RealtimeMessaging.Persistence
                 x.UseSqlServer(options.ConnectionString);
             });
 
+            services.AddSingleton<DatabaseInstaller>(sp =>
+            {
+                var options = sp.GetRequiredService<IOptions<NotificationOptions>>().Value;
+
+                return new DatabaseInstaller(
+                    options.PersistenceOptions.ConnectionString);
+            });
+
             return services;
+        }
+    }
+    public static class MigrationExtensions
+    {
+        public static async Task MigrateRealtimeNotifications(
+            this IServiceProvider services)
+        {
+            using var scope = services.CreateScope();
+
+            var db = scope.ServiceProvider
+                .GetRequiredService<DatabaseInstaller>();
+
+            await db.InstallAsync();
         }
     }
 }

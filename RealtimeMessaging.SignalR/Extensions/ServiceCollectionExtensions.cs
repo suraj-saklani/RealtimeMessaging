@@ -10,8 +10,7 @@ namespace RealtimeMessaging.SignalR.Extensions
             this IServiceCollection services)
         {
             services.AddSignalRCore();
-
-
+            
             services.AddSingleton<
                 INotificationDispatcher,
                 NotificationDispater>();

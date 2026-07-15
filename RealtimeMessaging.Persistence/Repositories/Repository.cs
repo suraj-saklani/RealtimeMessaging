@@ -33,6 +33,7 @@ namespace RealtimeMessaging.Persistence.Repositories
             CancellationToken cancellationToken = default)
         {
             entity.CreatedAt = DateTime.UtcNow;
+            entity.Id = Guid.NewGuid();
             await _dbSet.AddAsync(entity, cancellationToken);
 
             await dbContext.SaveChangesAsync(cancellationToken);

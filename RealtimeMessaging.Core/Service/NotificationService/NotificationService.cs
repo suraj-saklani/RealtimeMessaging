@@ -3,7 +3,6 @@ using RealtimeMessaging.Abstractions.Interface.Notification;
 using RealtimeMessaging.Abstractions.Model.Notification;
 using RealtimeMessaging.Core.Repositories;
 using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
 
 namespace RealtimeMessaging.Core.Service.NotificationService
 {
@@ -26,6 +25,34 @@ namespace RealtimeMessaging.Core.Service.NotificationService
             }
 
             await _dispatcher.SendToUserAsync(userId, request);
+        }
+
+        public async Task NotifyBroadcastAsync(NotificationRequest request, bool saveInDB = false)
+        {
+            if (saveInDB)
+            {
+                await AddNotification(new NotificationEntity
+                {
+                    Title = request.Title,
+                    Message = request.Message
+                });
+            }
+
+            await _dispatcher.BroadcastAsync(request);
+        }
+
+        public async Task NotifyGroupAsync(string groupId, NotificationRequest request, bool saveInDB = false)
+        {
+            if (saveInDB)
+            {
+                await AddNotification(new NotificationEntity
+                {
+                    Title = request.Title,
+                    Message = request.Message
+                });
+            }
+
+            await _dispatcher.SendToGroupAsync(groupId, request);
         }
 
         public async Task<IList<NotificationEntity>> GetAllNotification(Expression<Func<NotificationEntity, bool>> exp)

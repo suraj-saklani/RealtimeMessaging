@@ -6,6 +6,5 @@ public class NotificationRequest
 
     public string Message { get; set; }
 
-    public object? Data { get; set; }
 }
 
