@@ -20,7 +20,10 @@ namespace RealtimeMessaging.Core.Service.NotificationService
                 {
                     UserId = userId,
                     Title = request.Title,
-                    Message = request.Message
+                    Message = request.Message,
+                    IsRead = false,
+                    Type = request.Type,
+                    Data = request.Data
                 });
             }
 
@@ -65,15 +68,19 @@ namespace RealtimeMessaging.Core.Service.NotificationService
             return await _notificationRepository.AddAsync(notificationEntity);
         }
         
-        public async Task<NotificationEntity> MarkAsRead(Guid notificatoinId)
+        public async Task<NotificationEntity> MarkAsRead(Guid notificationId)
         {
-            var notification = await _notificationRepository.GetByIdAsync(notificatoinId);
+            var notification = await _notificationRepository.GetByIdAsync(notificationId);
             if (notification == null)
-                throw new ArgumentException(nameof(notificatoinId));
+                throw new ArgumentException(nameof(notificationId));
             notification.IsRead = true;
             notification.ReadAt = DateTime.UtcNow;
             return await _notificationRepository.UpdateAsync(notification);
         }
 
+        public async Task MarkNotificationAsRead(Guid notificationId)
+        {
+            await MarkAsRead(notificationId);
+        }
     }
 }

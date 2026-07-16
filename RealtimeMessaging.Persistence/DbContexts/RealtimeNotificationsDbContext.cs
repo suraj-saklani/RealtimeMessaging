@@ -8,14 +8,11 @@ namespace RealtimeMessaging.Persistence.DbContexts
         public RealtimeNotificationsDbContext( DbContextOptions<RealtimeNotificationsDbContext> options) : base(options)
         {
         }
-        public DbSet<NotificationEntity> Notifications => Set<NotificationEntity>();
+        public DbSet<NotificationEntity> Notifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.ApplyConfigurationsFromAssembly(
-                typeof(RealtimeNotificationsDbContext).Assembly);
         }
 
     }
