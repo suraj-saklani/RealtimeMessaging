@@ -15,8 +15,8 @@ NuGet restores those implementation packages transitively. Therefore, publish al
 ## Build and package
 
 ```powershell
-dotnet restore RealtimeMessaging.web/RealtimeMessaging.web.slnx
-dotnet build RealtimeMessaging.web/RealtimeMessaging.web.slnx -c Release --no-restore
+dotnet restore RealtimeMessaging.slnx
+dotnet build RealtimeMessaging.slnx -c Release --no-restore
 
 dotnet pack RealtimeMessaging.Abstractions/RealtimeMessaging.Abstractions.csproj -c Release --no-build
 dotnet pack RealtimeMessaging.Core/RealtimeMessaging.Core.csproj -c Release --no-build

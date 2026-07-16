@@ -1,6 +1,0 @@
-@RealtimeMessaging.web_HostAddress = http://localhost:5039
-
-GET {{RealtimeMessaging.web_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
