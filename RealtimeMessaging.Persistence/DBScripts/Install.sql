@@ -4,7 +4,9 @@ BEGIN
     (
         Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
 
-        UserId NVARCHAR(450) NOT NULL,
+        NotifiedTo NVARCHAR(450) NOT NULL,
+        
+        NotifiedToType BIT NOT NULL,
 
         Title NVARCHAR(500) NOT NULL,
 
@@ -20,18 +22,21 @@ BEGIN
 
         CreatedAt DATETIME2 NOT NULL,
 
-        ModifiedAt DATETIME2 NOT NULL
+        ModifiedAt DATETIME2 NULL
     );
 
-    CREATE INDEX IX_Notifications_UserId
-        ON dbo.Notifications(UserId);
+    CREATE INDEX IX_Notifications_NotifiedTo
+        ON dbo.Notifications(NotifiedTo);
 
     CREATE INDEX IX_Notifications_IsRead
         ON dbo.Notifications(IsRead);
 
-    CREATE INDEX IX_Notifications_UserId_IsRead
-        ON dbo.Notifications(UserId, IsRead);
+    CREATE INDEX IX_Notifications_NotifiedTo_IsRead
+        ON dbo.Notifications(NotifiedTo, IsRead);
 
     CREATE INDEX IX_Notifications_CreatedAt
         ON dbo.Notifications(CreatedAt);
+    
+    CREATE INDEX IX_Notifications_NotifiedToType_NotifiedTo
+        ON dbo.Notifications(NotifiedToType, NotifiedTo);
 END;

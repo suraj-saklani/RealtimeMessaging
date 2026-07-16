@@ -3,7 +3,7 @@ using RealtimeMessaging.Abstractions.Entities.Notifiacton;
 
 namespace RealtimeMessaging.Persistence.DbContexts
 {
-    public class RealtimeNotificationsDbContext : DbContext
+    internal class RealtimeNotificationsDbContext : DbContext
     {
         public RealtimeNotificationsDbContext( DbContextOptions<RealtimeNotificationsDbContext> options) : base(options)
         {

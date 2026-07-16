@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace RealtimeMessaging.Core.Service.NotificationService
 {
-    public class NotificationService(INotificationDispatcher _dispatcher, IRepository<NotificationEntity> _notificationRepository = null) : INotificationService
+    internal class NotificationService(INotificationDispatcher _dispatcher, IRepository<NotificationEntity> _notificationRepository = null) : INotificationService
     {
         public async Task NotifyUserAsync(string userId, NotificationRequest request, bool saveInDB = false)
         {
@@ -18,12 +18,13 @@ namespace RealtimeMessaging.Core.Service.NotificationService
             {
                 await AddNotification(new NotificationEntity
                 {
-                    UserId = userId,
+                    NotifiedTo = userId,
                     Title = request.Title,
                     Message = request.Message,
                     IsRead = false,
                     Type = request.Type,
-                    Data = request.Data
+                    Data = request.Data,
+                    NotifiedToType = NotifiedToEnum.User
                 });
             }
 
@@ -37,7 +38,12 @@ namespace RealtimeMessaging.Core.Service.NotificationService
                 await AddNotification(new NotificationEntity
                 {
                     Title = request.Title,
-                    Message = request.Message
+                    Message = request.Message,
+                    IsRead = false,
+                    Type = request.Type,
+                    Data = request.Data,
+                    NotifiedToType = NotifiedToEnum.Broadcast,
+                    NotifiedTo = "Broadcast"
                 });
             }
 
@@ -51,7 +57,12 @@ namespace RealtimeMessaging.Core.Service.NotificationService
                 await AddNotification(new NotificationEntity
                 {
                     Title = request.Title,
-                    Message = request.Message
+                    Message = request.Message,
+                    IsRead = false,
+                    Type = request.Type,
+                    Data = request.Data,
+                    NotifiedToType = NotifiedToEnum.Group,
+                    NotifiedTo = groupId
                 });
             }
 

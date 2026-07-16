@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace RealtimeMessaging.Persistence.Repositories
 {
-    public sealed class Repository<T>
+    internal sealed class Repository<T>
         (RealtimeNotificationsDbContext dbContext) : IRepository<T> where T : BaseEntity
     {
         private readonly DbSet<T> _dbSet = dbContext.Set<T>();
@@ -35,21 +35,20 @@ namespace RealtimeMessaging.Persistence.Repositories
             try
             {
 
+            
+            entity.CreatedAt = DateTime.UtcNow;
+            entity.Id = Guid.NewGuid();
+            await _dbSet.AddAsync(entity, cancellationToken);
 
-                entity.CreatedAt = DateTime.UtcNow;
-                entity.Id = Guid.NewGuid();
-                await _dbSet.AddAsync(entity, cancellationToken);
+            await dbContext.SaveChangesAsync(cancellationToken);
 
-                await dbContext.SaveChangesAsync(cancellationToken);
-
-                return entity;
+            return entity;
             }
-            catch (global::System.Exception ex)
+            catch (Exception ex)
             {
 
                 throw;
             }
-            
         }
 
         public async Task<T> UpdateAsync(
