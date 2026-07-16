@@ -29,6 +29,8 @@ namespace RealtimeMessaging.AspNetCore
             services.AddSingleton<IOptions<NotificationOptions>>(
                 Options.Create(notificationOptions));
 
+            services.AddSingleton<IOptions<RealtimeMessagingOptions>>(
+                 Options.Create(notificationOptions.RealtimeMessagingOptions));
             // Register library services
             services.AddRealtimeMessageSignalR();
             services.AddRealtimeNotificationsCore();

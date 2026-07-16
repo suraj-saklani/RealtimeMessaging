@@ -13,7 +13,7 @@ namespace RealtimeMessaging.Core.Interface.Repositories
     {
         public Task<T> AddAsync(T entity, CancellationToken cancellationToken = default)
         {
-            return Task.FromResult(entity);
+            throw new NotImplementedException();
         }
 
         public Task DeleteAsync(Guid id, CancellationToken cancellationToken = default)

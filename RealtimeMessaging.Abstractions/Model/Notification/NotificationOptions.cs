@@ -16,7 +16,7 @@ namespace RealtimeMessaging.AspNetCore
         /// <summary>
         /// Gets or sets the real-time messaging options.
         /// </summary>
-        public RealtimeMessagingOptions RealtimeMessagingOptions { get; set; }
+        public RealtimeMessagingOptions RealtimeMessagingOptions { get; set; } = new();
 
         public void UseSqlServer(
             string connectionString, bool autoMigration = false)

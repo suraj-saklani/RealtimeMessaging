@@ -9,12 +9,12 @@ namespace RealtimeMessaging.SignalR.Dispatchers
     {
         public async Task BroadcastAsync(NotificationRequest notification)
         {
-            await _hub.Clients.All.SendAsync("ReceiveNotification", notification);
+            await _hub.Clients.All.SendAsync("ReceiveMessage", notification);
         }
 
         public async Task SendToGroupAsync(string groupName, NotificationRequest notification)
         {
-            await _hub.Clients.Groups(groupName).SendAsync(groupName, notification);
+            await _hub.Clients.Groups(groupName).SendAsync("ReceiveMessage", notification);
         }
 
         public async Task SendToUserAsync(string userId, NotificationRequest notification)
