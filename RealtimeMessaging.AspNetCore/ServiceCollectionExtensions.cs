@@ -57,24 +57,8 @@ namespace RealtimeMessaging.AspNetCore
             return services;
         }
 
-        public static IEndpointRouteBuilder MapRealtimeNotifications(
-            this IEndpointRouteBuilder endpoints)
-        {
-            var options = endpoints.ServiceProvider
-                .GetRequiredService<IOptions<NotificationOptions>>()
-                .Value;
-
-            endpoints.MapHub<NotificationHub>(
-                options.RealtimeMessagingOptions.HubRoute);
-
-            return endpoints;
-        }
-    }
-
-    public static class ApplicationBuilderExtensions
-    {
         public static IApplicationBuilder UseRealtimeNotifications(
-            this IApplicationBuilder app)
+        this IApplicationBuilder app)
         {
             var options = app.ApplicationServices
                 .GetRequiredService<IOptions<NotificationOptions>>()
@@ -83,8 +67,17 @@ namespace RealtimeMessaging.AspNetCore
             if (options.PersistenceEnabled &&
                 options.PersistenceOptions?.AutoMigration == true)
             {
-                app.ApplicationServices.MigrateRealtimeNotifications();
+                app.ApplicationServices
+                    .MigrateRealtimeNotifications()
+                    .GetAwaiter()
+                    .GetResult();
             }
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<NotificationHub>(
+                    options.RealtimeMessagingOptions.HubRoute);
+            });
 
             return app;
         }

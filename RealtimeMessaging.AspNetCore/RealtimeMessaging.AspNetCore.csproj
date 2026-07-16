@@ -4,6 +4,17 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>RealtimeMessaging.AspNetCore</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Suraj Saklani</Authors>
+    <Description>SignalR-based real-time notification services for ASP.NET Core applications.</Description>
+    <PackageTags>signalr;notifications;realtime;aspnetcore</PackageTags>
+    <PackageProjectUrl>https://github.com/suraj-saklani/RealtimeMessaging</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/suraj-saklani/RealtimeMessaging</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +30,10 @@
     <ProjectReference Include="..\RealtimeMessaging.Core\RealtimeMessaging.Core.csproj" />
     <ProjectReference Include="..\RealtimeMessaging.Persistence\RealtimeMessaging.Persistence.csproj" />
     <ProjectReference Include="..\RealtimeMessaging.SignalR\RealtimeMessaging.SignalR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
