@@ -34,9 +34,10 @@ namespace RealtimeMessaging.Persistence.Repositories
         {
             entity.CreatedAt = DateTime.UtcNow;
             entity.Id = Guid.NewGuid();
+            
             await _dbSet.AddAsync(entity, cancellationToken);
-
             await dbContext.SaveChangesAsync(cancellationToken);
+
             return entity;           
         }
 
