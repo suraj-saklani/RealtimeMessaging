@@ -21,7 +21,7 @@ namespace RealtimeMessaging.Core.Interface.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IList<T>> GetAll(Expression<Func<T, bool>>? predicate = null)
+        public Task<IList<T>> GetAllAsync(Expression<Func<T, bool>>? predicate = null)
         {
             throw new NotImplementedException();
         }

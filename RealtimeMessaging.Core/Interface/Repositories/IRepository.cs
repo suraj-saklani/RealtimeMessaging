@@ -10,7 +10,7 @@ namespace RealtimeMessaging.Core.Repositories
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        Task<IList<T>> GetAll(Expression<Func<T, bool>>? predicate = null);
+        Task<IList<T>> GetAllAsync(Expression<Func<T, bool>>? predicate = null);
 
         Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 

@@ -16,7 +16,7 @@ namespace RealtimeMessaging.Core.Service.NotificationService
 
             if (saveInDB)
             {
-                await AddNotification(new NotificationEntity
+                await AddNotificationAsync(new NotificationEntity
                 {
                     NotifiedTo = userId,
                     Title = request.Title,
@@ -35,7 +35,7 @@ namespace RealtimeMessaging.Core.Service.NotificationService
         {
             if (saveInDB)
             {
-                await AddNotification(new NotificationEntity
+                await AddNotificationAsync(new NotificationEntity
                 {
                     Title = request.Title,
                     Message = request.Message,
@@ -54,7 +54,7 @@ namespace RealtimeMessaging.Core.Service.NotificationService
         {
             if (saveInDB)
             {
-                await AddNotification(new NotificationEntity
+                await AddNotificationAsync(new NotificationEntity
                 {
                     Title = request.Title,
                     Message = request.Message,
@@ -69,17 +69,17 @@ namespace RealtimeMessaging.Core.Service.NotificationService
             await _dispatcher.SendToGroupAsync(groupId, request);
         }
 
-        public async Task<IList<NotificationEntity>> GetAllNotification(Expression<Func<NotificationEntity, bool>> exp)
+        public async Task<IList<NotificationEntity>> GetAllNotificationAsync(Expression<Func<NotificationEntity, bool>>? exp = null)
         {
-            return await _notificationRepository.GetAll(exp);
+            return await _notificationRepository.GetAllAsync(exp);
         }
 
-        public async Task<NotificationEntity> AddNotification(NotificationEntity notificationEntity)
+        public async Task<NotificationEntity> AddNotificationAsync(NotificationEntity notificationEntity)
         {
             return await _notificationRepository.AddAsync(notificationEntity);
         }
         
-        public async Task<NotificationEntity> MarkAsRead(Guid notificationId)
+        public async Task<NotificationEntity> MarkNotificationAsReadAsync(Guid notificationId)
         {
             var notification = await _notificationRepository.GetByIdAsync(notificationId);
             if (notification == null)
@@ -87,11 +87,6 @@ namespace RealtimeMessaging.Core.Service.NotificationService
             notification.IsRead = true;
             notification.ReadAt = DateTime.UtcNow;
             return await _notificationRepository.UpdateAsync(notification);
-        }
-
-        public async Task MarkNotificationAsRead(Guid notificationId)
-        {
-            await MarkAsRead(notificationId);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace RealtimeMessaging.Persistence.Repositories
         (RealtimeNotificationsDbContext dbContext) : IRepository<T> where T : BaseEntity
     {
         private readonly DbSet<T> _dbSet = dbContext.Set<T>();
-        public async Task<IList<T>> GetAll(Expression<Func<T, bool>>? predicate = null)
+        public async Task<IList<T>> GetAllAsync(Expression<Func<T, bool>>? predicate = null)
         {
             IQueryable<T> query = _dbSet;
 

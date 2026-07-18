@@ -6,7 +6,7 @@ BEGIN
 
         NotifiedTo NVARCHAR(450) NOT NULL,
         
-        NotifiedToType TinyInt NOT NULL,
+        NotifiedToType INT NOT NULL,
 
         Title NVARCHAR(500) NOT NULL,
 
