@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>RealtimeMessaging.AspNetCore</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Suraj Saklani</Authors>
     <Description>SignalR-based real-time notification services for ASP.NET Core applications.</Description>
     <PackageTags>signalr;notifications;realtime;aspnetcore</PackageTags>

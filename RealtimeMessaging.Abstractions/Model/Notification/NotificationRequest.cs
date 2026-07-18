@@ -24,5 +24,10 @@ public class NotificationRequest
     /// </summary>
     public string? Data { get; set; }
 
+    /// <summary>
+    /// Client-side SignalR method to invoke.
+    /// Defaults to <c>ReceiveMessage</c>.
+    /// </summary>
+    public string MethodName { get; set; } = "ReceiveMessage";
 }
 
