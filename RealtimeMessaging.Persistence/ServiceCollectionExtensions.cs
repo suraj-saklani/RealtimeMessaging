@@ -49,6 +49,10 @@ namespace RealtimeMessaging.Persistence
                 .GetRequiredService<DatabaseInstaller>();
 
             await db.InstallAsync();
+            
+            var efDbContext = scope.ServiceProvider
+                .GetRequiredService<RealtimeNotificationsDbContext>();
+            await efDbContext.Database.MigrateAsync();
         }
     }
 }

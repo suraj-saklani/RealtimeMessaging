@@ -4,4 +4,5 @@
   <Project Path="RealtimeMessaging.Core/RealtimeMessaging.Core.csproj" />
   <Project Path="RealtimeMessaging.Persistence/RealtimeMessaging.Persistence.csproj" />
   <Project Path="RealtimeMessaging.SignalR/RealtimeMessaging.SignalR.csproj" />
+  <Project Path="RealtimeMessaging.Web/RealtimeMessaging.Web.csproj" Id="352160e1-944f-44d8-a368-d0ce35ac66d6" />
 </Solution>
