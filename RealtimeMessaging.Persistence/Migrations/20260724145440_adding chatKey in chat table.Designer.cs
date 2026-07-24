@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RealtimeMessaging.Persistence.DbContexts;
 
@@ -11,9 +12,11 @@ using RealtimeMessaging.Persistence.DbContexts;
 namespace RealtimeMessaging.Persistence.Migrations
 {
     [DbContext(typeof(RealtimeNotificationsDbContext))]
-    partial class RealtimeNotificationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260724145440_adding chatKey in chat table")]
+    partial class addingchatKeyinchattable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

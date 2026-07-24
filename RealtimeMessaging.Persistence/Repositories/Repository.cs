@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace RealtimeMessaging.Persistence.Repositories
 {
-    internal sealed class Repository<T>
+    internal class Repository<T>
         (RealtimeNotificationsDbContext dbContext) : IRepository<T> where T : BaseEntity
     {
         private readonly DbSet<T> _dbSet = dbContext.Set<T>();
@@ -21,6 +21,11 @@ namespace RealtimeMessaging.Persistence.Repositories
             return await query.AsNoTracking().ToListAsync();
         }
 
+        public IQueryable<T> GetAllQueryable()
+        {
+            IQueryable<T> query = _dbSet;
+            return query;
+        }
         public async Task<T?> GetByIdAsync(
             Guid id,
             CancellationToken cancellationToken = default)

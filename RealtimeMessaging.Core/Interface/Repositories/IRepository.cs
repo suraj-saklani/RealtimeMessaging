@@ -19,5 +19,6 @@ namespace RealtimeMessaging.Core.Repositories
         Task<T> UpdateAsync(T entity, CancellationToken cancellationToken = default);
 
         Task DeleteAsync(Guid id, CancellationToken cancellationToken = default);
+        IQueryable<T> GetAllQueryable();
     }
 }

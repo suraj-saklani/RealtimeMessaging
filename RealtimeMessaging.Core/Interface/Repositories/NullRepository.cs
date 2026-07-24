@@ -26,6 +26,11 @@ namespace RealtimeMessaging.Core.Interface.Repositories
             throw new NotImplementedException();
         }
 
+        public IQueryable<T> GetAllQueryable()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();

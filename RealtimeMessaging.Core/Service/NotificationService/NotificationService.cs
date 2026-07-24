@@ -3,6 +3,7 @@ using RealtimeMessaging.Abstractions.Interface.Notification;
 using RealtimeMessaging.Abstractions.Model.Notification;
 using RealtimeMessaging.Core.Repositories;
 using System.Linq.Expressions;
+using System.Text.Json;
 
 namespace RealtimeMessaging.Core.Service.NotificationService
 {
@@ -23,7 +24,7 @@ namespace RealtimeMessaging.Core.Service.NotificationService
                     Message = request.Message,
                     IsRead = false,
                     Type = request.Type,
-                    Data = request.Data,
+                    Data = JsonSerializer.Serialize(request.Data),
                     NotifiedToType = NotifiedToEnum.User
                 });
             }
@@ -41,7 +42,7 @@ namespace RealtimeMessaging.Core.Service.NotificationService
                     Message = request.Message,
                     IsRead = false,
                     Type = request.Type,
-                    Data = request.Data,
+                    Data = JsonSerializer.Serialize(request.Data),
                     NotifiedToType = NotifiedToEnum.Broadcast,
                     NotifiedTo = "Broadcast"
                 });
@@ -60,7 +61,7 @@ namespace RealtimeMessaging.Core.Service.NotificationService
                     Message = request.Message,
                     IsRead = false,
                     Type = request.Type,
-                    Data = request.Data,
+                    Data = JsonSerializer.Serialize(request.Data),
                     NotifiedToType = NotifiedToEnum.Group,
                     NotifiedTo = groupId
                 });

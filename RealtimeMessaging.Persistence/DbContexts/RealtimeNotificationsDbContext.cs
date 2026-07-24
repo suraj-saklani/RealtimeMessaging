@@ -40,6 +40,8 @@ namespace RealtimeMessaging.Persistence.DbContexts
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.LastMessagePreview).HasMaxLength(500);
                 entity.Property(e => e.LastMessageSenderId).HasMaxLength(450);
+                entity.Property(e => e.ChatKey).HasMaxLength(910);
+                entity.HasIndex(e => e.ChatKey);
             });
             #endregion
 

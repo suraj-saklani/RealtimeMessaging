@@ -22,7 +22,7 @@ public class NotificationRequest
     /// <summary>
     /// Additional payload serialized as JSON.
     /// </summary>
-    public string? Data { get; set; }
+    public Object? Data { get; set; }
 
     /// <summary>
     /// Client-side SignalR method to invoke.
