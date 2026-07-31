@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using RealtimeMessaging.AspNetCore;
+using RealtimeMessaging.Core.Interface.Repositories;
 using RealtimeMessaging.Core.Repositories;
 using RealtimeMessaging.Persistence.Configuration;
 using RealtimeMessaging.Persistence.DbContexts;
@@ -18,6 +19,8 @@ namespace RealtimeMessaging.Persistence
         Action<NotificationPersistenceOptions> configure)
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IChatRepository), typeof(ChatRepository));
+
 
             var options = new NotificationPersistenceOptions();
             configure(options);

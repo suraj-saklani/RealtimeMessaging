@@ -9,7 +9,7 @@ namespace RealtimeMessaging.Persistence.Repositories
     {
         private readonly RealtimeNotificationsDbContext dbContext;
 
-        public ChatRepository(RealtimeNotificationsDbContext dbContext): base(dbContext)
+        public ChatRepository(RealtimeNotificationsDbContext dbContext) : base(dbContext)
         {
             this.dbContext = dbContext;
         }
@@ -30,7 +30,7 @@ namespace RealtimeMessaging.Persistence.Repositories
                 CreatedAt = DateTime.UtcNow,
                 ChatKey = string.CompareOrdinal(senderUserId, receiverUserId) < 0
                     ? $"{senderUserId}:{receiverUserId}"
-                    : $"{receiverUserId}:{senderUserId}"
+                    : $"{receiverUserId}:{senderUserId}",
             };
 
             await dbContext.AddAsync(chatEntity);
@@ -56,6 +56,19 @@ namespace RealtimeMessaging.Persistence.Repositories
                 await dbContext.AddAsync(participant);
             }
             return chatEntity;
+        }
+
+        public async Task<List<ChatEntity>> GetChatsByUserIdAsync(string userId)
+        {
+            var chatIds = await dbContext.ChatParticipants
+                .Where(cp => cp.UserId == userId)
+                .Select(cp => cp.ChatId)
+                .Distinct()
+                .ToListAsync();
+            var chats = await dbContext.Chats
+                .Where(c => chatIds.Contains(c.Id))
+                .ToListAsync();
+            return chats;
         }
     }
 }

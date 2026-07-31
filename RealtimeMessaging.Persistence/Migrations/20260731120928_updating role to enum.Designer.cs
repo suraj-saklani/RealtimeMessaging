@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RealtimeMessaging.Persistence.DbContexts;
 
@@ -11,9 +12,11 @@ using RealtimeMessaging.Persistence.DbContexts;
 namespace RealtimeMessaging.Persistence.Migrations
 {
     [DbContext(typeof(RealtimeNotificationsDbContext))]
-    partial class RealtimeNotificationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260731120928_updating role to enum")]
+    partial class updatingroletoenum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,10 +103,12 @@ namespace RealtimeMessaging.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LastMessagePreview")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("LastMessageSenderId")
+                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar(450)");
 

@@ -6,7 +6,8 @@ using RealtimeMessaging.Core.Repositories;
 
 namespace RealtimeMessaging.Core.Service.ChatService
 {
-    internal class ChatService(IChatRepository _chatRepository, IRepository<ChatMessageEntity> _chatMessageRepository, INotificationDispatcher _dispatcher) : IChatService
+    internal class ChatService(IChatRepository _chatRepository, IRepository<ChatMessageEntity> _chatMessageRepository, INotificationDispatcher _dispatcher
+        , IRepository<ChatParticipantEntity> _chatParticipantRepository) : IChatService
     {
         public async Task SendMessageAsync(string senderUserId, string receiverUserId, string message)
         {
@@ -23,6 +24,7 @@ namespace RealtimeMessaging.Core.Service.ChatService
             chat.LastMessageDate = DateTime.UtcNow;
             chat.LastMessagePreview = ChatEntity.PreviewMessage(message);
             chat.LastMessageSenderId = senderUserId;
+            chat.LastMessageId = chatMessageEntity.Id;
             await _chatRepository.UpdateAsync(chat);
 
             await _dispatcher.SendToUserAsync(receiverUserId, new NotificationRequest
@@ -33,8 +35,18 @@ namespace RealtimeMessaging.Core.Service.ChatService
                     SenderId = senderUserId,
                     Message = message,
                     Timestamp = chat.LastMessageDate
-                }
+                },
+                MethodName = "chatMessageReceived",
             });
+        }
+        public async Task<IList<ChatEntity>> GetChatByUser(string userId)
+        {
+            return await _chatRepository.GetChatsByUserIdAsync(userId);
+        }
+
+        public async Task<IList<ChatMessageEntity>> GetChatMessages(Guid chatId)
+        {
+            return await _chatMessageRepository.GetAllAsync(x=>x.ChatId == chatId);
         }
 
     }

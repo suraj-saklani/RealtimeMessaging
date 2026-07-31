@@ -6,8 +6,8 @@ namespace RealtimeMessaging.Abstractions.Model.Entities.Chat
     {
         public Guid LastMessageId { get; set; }
         public DateTime LastMessageDate { get; set; }
-        public string LastMessagePreview { get; set; }
-        public string LastMessageSenderId { get; set; }
+        public string? LastMessagePreview { get; set; }
+        public string? LastMessageSenderId { get; set; }
         public string ChatKey { get; set; }
 
         public static string GetChatKey(string userId1, string userId2)

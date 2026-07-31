@@ -1,6 +1,7 @@
-﻿using RealtimeMessaging.Core.Service.NotificationService;
+﻿using Microsoft.Extensions.DependencyInjection;
 using RealtimeMessaging.Abstractions.Interface.Notification;
-using Microsoft.Extensions.DependencyInjection;
+using RealtimeMessaging.Core.Service.ChatService;
+using RealtimeMessaging.Core.Service.NotificationService;
 
 namespace RealtimeMessaging.Core
 {
@@ -12,7 +13,11 @@ namespace RealtimeMessaging.Core
             services.AddScoped<
                 INotificationService,
                 NotificationService>();
-         
+
+            services.AddScoped<
+                IChatService,
+                ChatService>();
+
             return services;
         }
     }
